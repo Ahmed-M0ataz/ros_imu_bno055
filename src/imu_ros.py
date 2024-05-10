@@ -72,7 +72,7 @@ class SensorIMU:
         self.stop_request = False
 
         # Create topics
-        self.pub_imu_data = rospy.Publisher('imu/data', Imu, queue_size=1)
+        self.pub_imu_data = rospy.Publisher('imu/data_raw', Imu, queue_size=1)
 
         if self.use_magnetometer == True:
             self.pub_imu_magnetometer = rospy.Publisher('imu/magnetometer', MagneticField, queue_size=1)
